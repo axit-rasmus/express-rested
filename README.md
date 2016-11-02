@@ -469,10 +469,11 @@ this object for read-only serialization purposes.
 
 Ensures inclusion of the given resource into the collection. Triggers the `persist` callback.
 
-**collection.setAll(Class resources[], Function cb)**
+**collection.setAll(resources, Function cb)**
 
-Deletes all resources not given, and creates or updates all resources given in the `resources` array. Triggers the
-`persist` callback.
+The `resources` object should be a map of IDs to resources.
+Deletes all resources not given, and creates or updates all resources given.
+Triggers the `persist` callback.
 
 **collection.del(string id, Function cb)**
 
